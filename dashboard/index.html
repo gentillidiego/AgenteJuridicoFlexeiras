@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenGravity — Painel de Configuração</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">⚡</div>
+      <div>
+        <h1>OpenGravity</h1>
+        <span>Painel de Configuração</span>
+      </div>
+    </div>
+    <div class="status-bar" id="statusBar">
+      <div class="status-pill" id="st-telegram"><span class="dot"></span>Telegram</div>
+      <div class="status-pill" id="st-groq"><span class="dot"></span>Groq</div>
+      <div class="status-pill" id="st-google"><span class="dot"></span>Google</div>
+      <div class="status-pill" id="st-whatsapp"><span class="dot"></span>WhatsApp</div>
+      <div class="status-pill" id="st-elevenlabs"><span class="dot"></span>ElevenLabs</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- TABS -->
+    <nav class="tabs">
+      <button class="tab active" data-tab="credentials">🔑 Credenciais</button>
+      <button class="tab" data-tab="google">🟢 Google</button>
+      <button class="tab" data-tab="whatsapp">📱 WhatsApp</button>
+      <button class="tab" data-tab="training">🎓 Treinamento</button>
+      <button class="tab" data-tab="advanced">⚙️ Avançado</button>
+    </nav>
+
+    <!-- TOAST -->
+    <div id="toast" class="toast hidden"></div>
+
+    <!-- TAB: Credenciais -->
+    <section class="tab-content active" id="tab-credentials">
+      <div class="section-header">
+        <h2>Credenciais de API</h2>
+        <p>Configure as chaves para cada serviço. Clique em <strong>?</strong> para um guia passo a passo.</p>
+      </div>
+
+      <form id="credForm">
+        <div class="card">
+          <h3>🤖 Telegram</h3>
+          <div class="field-group">
+            <div class="field">
+              <label>Bot Token</label>
+              <div class="input-row">
+                <input type="password" id="TELEGRAM_BOT_TOKEN" name="TELEGRAM_BOT_TOKEN" placeholder="1234567890:AAH...">
+                <button type="button" class="btn-eye" onclick="togglePass(this)">👁</button>
+                <button type="button" class="btn-help" onclick="showHelp('telegram_token')">?</button>
+              </div>
+            </div>
+            <div class="field">
+              <label>IDs de Usuários Permitidos</label>
+              <div class="input-row">
+                <input type="text" id="TELEGRAM_ALLOWED_USER_IDS" name="TELEGRAM_ALLOWED_USER_IDS" placeholder="83013502,987654321">
+                <button type="button" class="btn-help" onclick="showHelp('telegram_ids')">?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🧠 Groq (LLM)</h3>
+          <div class="field-group">
+            <div class="field">
+              <label>API Key</label>
+              <div class="input-row">
+                <input type="password" id="GROQ_API_KEY" name="GROQ_API_KEY" placeholder="gsk_...">
+                <button type="button" class="btn-eye" onclick="togglePass(this)">👁</button>
+                <button type="button" class="btn-help" onclick="showHelp('groq')">?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🔀 OpenRouter (Fallback LLM)</h3>
+          <div class="field-group">
+            <div class="field">
+              <label>API Key</label>
+              <div class="input-row">
+                <input type="password" id="OPENROUTER_API_KEY" name="OPENROUTER_API_KEY" placeholder="sk-or-v1-...">
+                <button type="button" class="btn-eye" onclick="togglePass(this)">👁</button>
+                <button type="button" class="btn-help" onclick="showHelp('openrouter')">?</button>
+              </div>
+            </div>
+            <div class="field">
+              <label>Modelo</label>
+              <div class="input-row">
+                <input type="text" id="OPENROUTER_MODEL" name="OPENROUTER_MODEL" placeholder="openrouter/free">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>🎙 ElevenLabs (Voz)</h3>
+          <div class="field-group">
+            <div class="field">
+              <label>API Key</label>
+              <div class="input-row">
+                <input type="password" id="ELEVENLABS_API_KEY" name="ELEVENLABS_API_KEY" placeholder="sk_...">
+                <button type="button" class="btn-eye" onclick="togglePass(this)">👁</button>
+                <button type="button" class="btn-help" onclick="showHelp('elevenlabs')">?</button>
+              </div>
+            </div>
+            <div class="field">
+              <label>Voice ID</label>
+              <div class="input-row">
+                <select id="ELEVENLABS_VOICE_ID" name="ELEVENLABS_VOICE_ID">
+                  <option value="cgSgspJ2msm6clMCkdW9">Jessica — Jovem, Calorosa (PT-BR) ⭐</option>
+                  <option value="EXAVITQu4vr4xnSDxMaL">Sarah — Madura, Confiante</option>
+                  <option value="XrExE9yKIg1WjnnlVkGX">Matilda — Profissional, Animada</option>
+                  <option value="Xb7hH8MSUJpSbSDYk0k2">Alice — Educativa, Britânica</option>
+                  <option value="pFZP5JQG7iQjIQuC4Bku">Lily — Aveludada, Britânica</option>
+                </select>
+                <button type="button" class="btn-help" onclick="showHelp('elevenlabs_voice')">?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="save-row">
+          <button type="submit" class="btn-primary">💾 Salvar Configurações</button>
+          <small>O bot precisa ser reiniciado para aplicar as mudanças.</small>
+        </div>
+      </form>
+    </section>
+
+    <!-- TAB: Google -->
+    <section class="tab-content" id="tab-google">
+      <div class="section-header">
+        <h2>Google Workspace</h2>
+        <p>Conecte ao Gmail, Calendar, Drive, Contacts, Sheets e Docs.</p>
+      </div>
+
+      <div class="card">
+        <h3>Passo 1 — Credenciais OAuth</h3>
+        <p class="hint">Faça upload do arquivo <code>client_secret_*.json</code> baixado do Google Cloud Console.</p>
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-icon">☁️</div>
+          <p>Arraste o arquivo JSON aqui ou <label class="link" for="jsonFile">clique para selecionar</label></p>
+          <input type="file" id="jsonFile" accept=".json" onchange="uploadCredentials(this)">
+          <div id="uploadStatus" class="upload-status hidden"></div>
+        </div>
+        <button type="button" class="btn-help-inline" onclick="showHelp('google_credentials')">? Como obter esse arquivo</button>
+      </div>
+
+      <div class="card">
+        <h3>Passo 2 — Autorizar Conta</h3>
+        <p class="hint">Informe o email e clique em Autorizar para conectar ao Google.</p>
+        <div class="field">
+          <label>Conta Gmail</label>
+          <div class="input-row">
+            <input type="email" id="googleAccount" placeholder="seuemail@gmail.com" value="gentillidiego@gmail.com">
+          </div>
+        </div>
+        <div class="google-actions">
+          <button class="btn-primary" onclick="authGoogle()">🔐 Autorizar com Google</button>
+          <button class="btn-danger" onclick="disconnectGoogle()">Desconectar</button>
+        </div>
+        <div id="googleStatus" class="status-box hidden"></div>
+      </div>
+
+      <div class="card">
+        <h3>Status da Conexão</h3>
+        <div id="googleDetails" class="status-details">Verificando...</div>
+      </div>
+    </section>
+
+    <!-- TAB: WhatsApp -->
+    <section class="tab-content" id="tab-whatsapp">
+      <div class="section-header">
+        <h2>WhatsApp (Baileys)</h2>
+        <p>Conecte o agente ao WhatsApp. Use um número dedicado para o bot.</p>
+      </div>
+
+      <div class="card">
+        <h3>Configuração</h3>
+        <div class="field">
+          <label>Números Autorizados <button type="button" class="btn-help" onclick="showHelp('wa_numbers')">?</button></label>
+          <div class="input-row">
+            <input type="text" id="WHATSAPP_ALLOWED_NUMBERS" name="WHATSAPP_ALLOWED_NUMBERS" placeholder="5511999999999,5511888888888">
+          </div>
+          <small>Formato internacional sem + (ex: 55119...)</small>
+        </div>
+        <div class="toggle-row">
+          <label class="toggle-label">Habilitar WhatsApp</label>
+          <label class="toggle">
+            <input type="checkbox" id="waEnabled" onchange="toggleWhatsApp(this)">
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="card" id="waPanel">
+        <h3>Conexão</h3>
+        <div id="waStatusBox" class="wa-status-box">
+          <div class="wa-disconnected">
+            <p>📴 WhatsApp desconectado</p>
+            <button class="btn-primary" onclick="generateQR()">📷 Gerar QR Code</button>
+          </div>
+        </div>
+        <div id="qrContainer" class="qr-container hidden">
+          <div class="qr-instructions">
+            <p>Abra o WhatsApp → <strong>Dispositivos Conectados → Conectar dispositivo</strong></p>
+            <p>Escaneie o QR abaixo:</p>
+          </div>
+          <div id="qrCode" class="qr-code-img"></div>
+          <div class="qr-actions">
+            <button class="btn-secondary" onclick="generateQR()">🔄 Gerar Novo QR</button>
+            <button class="btn-danger" onclick="disconnectWhatsApp()">Desconectar</button>
+          </div>
+          <p class="qr-timer" id="qrTimer"></p>
+        </div>
+        <div id="waConnectedBox" class="wa-connected hidden">
+          <div class="connected-info">
+            <span class="dot connected"></span>
+            <span>Conectado: <strong id="waNumber"></strong></span>
+          </div>
+          <button class="btn-danger" onclick="disconnectWhatsApp()">Desconectar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: Treinamento -->
+    <section class="tab-content" id="tab-training">
+      <div class="section-header">
+        <h2>Treinamento (Personalidade)</h2>
+        <p>Defina a personalidade e base de conhecimento do agente através de arquivos Markdown.</p>
+      </div>
+
+      <div class="card">
+        <h3>Upload de Personalidade (.md)</h3>
+        <p class="hint">Faça upload de um arquivo <code>.md</code> com as instruções de como o agente deve se comportar e o conhecimento que ele deve ter.</p>
+        <div class="upload-area" id="trainingUploadArea" onclick="document.getElementById('trainingFile').click()">
+          <input type="file" id="trainingFile" accept=".md" class="hidden" onchange="uploadTraining(this)">
+          <div class="upload-icon">🎓</div>
+          <p id="trainingFileName">Arraste o arquivo .md aqui ou clique para selecionar</p>
+          <div id="trainingStatus" class="upload-status hidden"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Conteúdo Ativo</h3>
+        <p class="hint">Este é o conteúdo que o agente está usando atualmente para moldar suas respostas.</p>
+        <div id="activePersonality" class="active-personality-preview">
+          Carregando conteúdo...
+        </div>
+        <div class="save-row">
+          <button class="btn-primary" onclick="loadTrainingStatus()">🔄 Recarregar Conteúdo</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB: Avançado -->
+    <section class="tab-content" id="tab-advanced">
+      <div class="section-header">
+        <h2>Configurações Avançadas</h2>
+      </div>
+      <form id="advancedForm">
+        <div class="card">
+          <h3>Banco de Dados</h3>
+          <div class="field">
+            <label>Caminho do DB (SQLite)</label>
+            <div class="input-row">
+              <input type="text" id="DB_PATH" name="DB_PATH" placeholder="./memory.db">
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Conta Google</h3>
+          <div class="field">
+            <label>Email padrão</label>
+            <div class="input-row">
+              <input type="email" id="GOG_ACCOUNT" name="GOG_ACCOUNT" placeholder="seuemail@gmail.com">
+            </div>
+          </div>
+        </div>
+        <div class="save-row">
+          <button type="submit" class="btn-primary">💾 Salvar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- MODAL DE AJUDA -->
+  <div id="helpModal" class="modal hidden">
+    <div class="modal-backdrop" onclick="closeHelp()"></div>
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeHelp()">✕</button>
+      <div id="helpContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

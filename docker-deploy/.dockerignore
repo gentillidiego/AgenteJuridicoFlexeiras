@@ -1,0 +1,24 @@
+# Dependências Node.js
+node_modules/
+npm-debug.log
+
+# Dados persistentes — montados via volume no docker-compose
+memory.db
+whatsapp-session/
+whatsapp-test-session/
+gogcli-config/
+
+# Credenciais e segredos — NUNCA dentro da imagem
+.env
+client_secret_*.json
+
+# Arquivos de desenvolvimento e documentação
+.git/
+.gitignore
+README.md
+contexto/
+AgenteEliza.md
+SKILLgoogle.md
+
+# Pasta de deploy (evita recursão)
+docker-deploy/

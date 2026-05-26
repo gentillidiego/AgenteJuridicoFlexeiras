@@ -1,0 +1,58 @@
+# Dependências de Pacotes
+node_modules/
+jspm_packages/
+web_modules/
+
+# Configurações de Ambiente (Arquivos Sensíveis contendo tokens e chaves)
+.env
+.env.test
+.env.production
+*.env
+
+# Bancos de Dados Locais e Arquivos SQLite
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+memory.db
+
+# Autenticação e Sessões do WhatsApp Web (Baileys)
+whatsapp-session/
+whatsapp-test-session/
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Credenciais e Arquivos de Autenticação do Google Workspace CLI
+client_secret*.json
+service-account*.json
+gogcli-config/
+
+# Compilados e builds (TypeScript/Outros)
+dist/
+build/
+out/
+.tsc-cache/
+*.tsbuildinfo
+
+# Arquivos de Sistema e IDEs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs e Temporários
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+logs/
+*.log
+/tmp/
