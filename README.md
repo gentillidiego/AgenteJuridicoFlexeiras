@@ -211,6 +211,22 @@ Quando a alteracao envolver apenas `personality.md`, nao e necessario rebuild do
 
 ---
 
+## Validacao da Base Juridica
+
+Apos atualizar `personality.md` e `eliza/AgenteEliza.md`, recomenda-se testar o agente pelo mesmo canal usado em producao. As perguntas abaixo ajudam a confirmar se o bot esta lendo a base juridica atualizada e se diferencia corretamente leis, regimes e contribuicoes.
+
+| Tema | Pergunta de teste | Resposta esperada |
+| --- | --- | --- |
+| Lei 620/2025 | `Dra. Eliza, com base na Lei Municipal nº 620/2025, qual é a alíquota da contribuição patronal normal do Município para o RPPS/FUNPREFEX, e essa lei mudou a contribuição do servidor ativo?` | Deve informar contribuicao patronal normal de 14%, vinculada a remuneracao de contribuicao, e esclarecer que a lei trata da contribuicao patronal, sem alterar diretamente a contribuicao do servidor ativo. |
+| Leis 523/2021 e 620/2025 | `Dra. Eliza, diferencie as contribuições previdenciárias do RPPS/FUNPREFEX para servidor ativo, aposentado/pensionista e ente patronal, considerando as Leis Municipais 523/2021 e 620/2025.` | Deve distinguir servidor ativo, aposentado/pensionista e ente patronal: ativo com 14% sobre remuneracao de contribuicao; aposentado/pensionista com 14% apenas sobre a parcela acima do teto do RGPS; ente patronal com 14% como contribuicao normal. |
+| Lei 566/2022 | `Dra. Eliza, pela Lei Municipal nº 566/2022, o que acontece com o servidor que ingressar depois da instituição do Regime de Previdência Complementar e tiver remuneração acima do teto do RGPS?` | Deve mencionar inscricao automatica no plano complementar, possibilidade de desistencia em ate 90 dias e restituicao das contribuicoes conforme regulamento. |
+| Lei 525/2021 | `Dra. Eliza, depois da Lei Municipal nº 525/2021, como fica a readaptação do servidor público municipal de Flexeiras?` | Deve indicar limitacao fisica ou mental, avaliacao por junta medica oficial, cargo compativel, manutencao da remuneracao do cargo de origem e requisitos de escolaridade. |
+| Lei 503/2019 | `Dra. Eliza, conforme a Lei Municipal nº 503/2019, qual é o prazo para conclusão do processo administrativo disciplinar e como funciona a composição da comissão?` | Deve apontar prazo de ate 60 dias, prorrogavel por igual periodo, comissao com no minimo 3 servidores estaveis, presidente com escolaridade igual ou superior a do indiciado, ampla defesa e contraditorio. |
+
+Esses testes nao substituem revisao juridica. Eles funcionam como verificacao operacional da memoria ativa do agente apos manutencao da base.
+
+---
+
 ## Seguranca
 
 - Nunca versionar `.env`, chaves de API, sessoes do WhatsApp, bancos SQLite ou credenciais OAuth.
