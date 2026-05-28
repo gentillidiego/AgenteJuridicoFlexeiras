@@ -177,13 +177,37 @@ Esta é a abordagem ideal para servidores Linux Debian/Ubuntu em nuvem, garantin
 
 ---
 
-## 🔧 Treinamento de Persona e Comportamento
+## 🔧 Base Jurídica, Treinamento e Comportamento
 
-A personalidade, limitações e base de conhecimento específica do bot são carregadas do arquivo `personality.md` na raiz do projeto. 
+A personalidade, limitações e base de conhecimento ativa do bot são carregadas do arquivo `personality.md` na raiz do projeto. O agente lê esse arquivo a cada nova mensagem recebida, então alterações em `personality.md` entram em vigor **sem rebuild e sem reiniciar a aplicação**.
 
-Para alterar as regras de negócios ou o tom de voz do agente, basta abrir o `personality.md` e editá-lo. O agente recarrega essas informações a cada nova mensagem recebida, permitindo atualizações de comportamento **sem a necessidade de reiniciar a aplicação**.
+### Organização da Base da Dra. Eliza
 
-*   **Exemplo de Caso de Uso Real:** Você pode configurá-la como uma assistente jurídica especializada nas leis do seu município, como um assistente de suporte de T.I. para responder dúvidas frequentes dos seus clientes ou como um assistente de vendas e captação de leads.
+*   **Fontes originais:** os PDFs oficiais das leis ficam em `eliza/Legislação/`. Eles servem como arquivo-fonte e trilha de auditoria, mas o agente não lê PDFs automaticamente em tempo de execução.
+*   **Base canônica consolidada:** `eliza/AgenteEliza.md` guarda a versão documental mais completa da Dra. Eliza, com estatuto, previdência, regras disciplinares e contexto institucional.
+*   **Base ativa do agente:** `personality.md` contém o resumo operacional que é injetado no prompt do agente. Este é o arquivo que precisa estar atualizado para que o WhatsApp/Telegram respondam com a nova base.
+*   **Documentação do projeto:** `contexto/CONTEXTO.md` descreve arquitetura, deploy e histórico operacional. Ele não é usado pelo agente como base de resposta.
+
+### Legislações Municipais Cobertas
+
+*   **Lei nº 412/2009:** Regime Jurídico dos Servidores Públicos de Flexeiras/AL.
+*   **Lei nº 503/2019:** Altera regras do processo administrativo-disciplinar, incluindo prazos e composição da comissão.
+*   **Lei nº 523/2021:** Reestrutura o RPPS/FUNPREFEX, incluindo contribuição do servidor ativo, aposentados e pensionistas, benefícios previdenciários, aposentadorias, pensão por morte e abono de permanência.
+*   **Lei nº 525/2021:** Altera dispositivos do estatuto sobre readaptação, salário-família, auxílio-doença, auxílio-reclusão, licença saúde, licença gestante e licença por adoção.
+*   **Lei nº 566/2022:** Institui o Regime de Previdência Complementar (RPC), regra do teto do RGPS, inscrição automática, desistência e contribuição paritária.
+*   **Lei nº 620/2025:** Fixa a contribuição patronal normal em 14% sobre a remuneração de contribuição, nos termos do art. 17, III, da Lei nº 523/2021.
+
+### Fluxo para Atualizar a Base Jurídica
+
+1.  Salve o PDF oficial em `eliza/Legislação/`.
+2.  Extraia e revise os pontos normativos relevantes da lei.
+3.  Atualize `eliza/AgenteEliza.md` com a base consolidada.
+4.  Atualize `personality.md` com o resumo operacional que o agente deve usar nas respostas.
+5.  Em produção Docker, envie apenas o `personality.md` atualizado quando a mudança for só de conhecimento/persona. Como o `docker-compose.yml` monta `./personality.md:/app/personality.md`, não é necessário rebuild.
+
+### Observação sobre WhatsApp
+
+Atualizar `personality.md` não derruba a sessão do WhatsApp. Mesmo em caso de restart/rebuild, a sessão tende a permanecer conectada porque `./whatsapp-session` é montado como volume persistente. A conexão só deve ser refeita se a pasta `whatsapp-session/` for removida, se o dashboard mandar desconectar, ou se o container subir sem esse volume.
 
 ---
 

@@ -112,7 +112,8 @@
 
 | Tipo de Licença | Duração / Regra |
 |---|---|
-| **Por motivo de saúde** | Licenças > 15 dias exigem junta médica. Se a soma ultrapassar 16 dias em 30 dias corridos, o servidor é encaminhado ao auxílio-doença. |
+| **Por motivo de saúde** | Licenças > 15 dias exigem junta médica. Se licenças reiteradas ou continuadas somarem mais de 16 dias em 30 dias, são transformadas em auxílio-doença. |
+| **Auxílio-doença** | Devido ao servidor incapacitado por mais de 15 dias consecutivos, com renda mensal calculada na forma determinada pelo RGPS. Exige exame médico-pericial da junta médica municipal. |
 | **Gestante** | 180 dias consecutivos, com remuneração integral. |
 | **Adoção/Guarda (até 1 ano de idade)** | 180 dias. |
 | **Adoção/Guarda (1 a 4 anos)** | 60 dias. |
@@ -143,38 +144,51 @@
 - Comissão: **3 servidores estáveis**.
 - Prazo de defesa: **10 dias**.
 - Conclusão: **60 dias** (prorrogáveis por mais 60).
-- Afastamento preventivo durante PAD **não** corta a remuneração básica.
+- Afastamento preventivo: até **60 dias**, prorrogável por mais 60. Nos casos graves indicados na Lei 412, o servidor recebe exclusivamente o vencimento básico e adicional por tempo de serviço, se devido.
 
 ---
 
 ## 9. REGIME PRÓPRIO DE PREVIDÊNCIA SOCIAL — RPPS (Lei 523/2021, atualizada pela Lei 620/2025)
 
-### Contribuições
+### Vinculação e Custeio
 
-| Categoria | Alíquota |
+| Categoria | Regra |
 |---|---|
-| Servidor Ativo | **14%** sobre a remuneração total |
-| Aposentado / Pensionista | **14%** apenas sobre o valor que **ultrapassar** o teto do RGPS (INSS) |
-| Patronal (Prefeitura) | **14%** |
+| Segurados do RPPS | Servidores titulares de cargo efetivo, ativos e aposentados. Comissionados exclusivos, temporários e empregados públicos ficam no RGPS. |
+| Servidor ativo | Contribuição de **14%** sobre a remuneração de contribuição, conforme Lei 523/2021. |
+| Aposentado / pensionista | Contribuição de **14%** apenas sobre a parcela que ultrapassar o teto do RGPS. |
+| Patronal | A Lei 620/2025 fixa a contribuição patronal normal em **14%** sobre a remuneração de contribuição. |
 
-### Benefícios Concedidos
+- **Base de contribuição:** vencimento do cargo efetivo, vantagens permanentes e adicionais individuais; exclui diárias, ajuda de custo, transporte, salário-família, auxílio-alimentação, auxílio-creche, parcelas de local de trabalho, comissão/função, abono de permanência e parcelas indenizatórias.
+- **Lei 620/2025:** trata da contribuição patronal normal do art. 17, III, da Lei 523/2021. Foi publicada em **20 de junho de 2025** e entra em vigor no primeiro dia do mês subsequente ao nonagésimo dia da publicação.
 
-- **Aposentadoria por Incapacidade Permanente:** Quando o servidor for insuscetível de readaptação.
-- **Aposentadoria Compulsória:** Aos **75 anos**.
-- **Aposentadorias Voluntárias e Especiais:** Conforme regras de idade e tempo de contribuição (critérios reduzidos para professores, PCDs e agentes nocivos).
-- **Pensão por Morte:** Cota familiar de 50% + 10% por dependente (limite de 100%). Dependente menor de 18 anos tem cota de 20%.
+### Benefícios e Regras Principais
+
+- **Aposentadoria por Incapacidade Permanente:** exige perícia médica oficial e impossibilidade de readaptação. Regra geral: 60% da média + 2% por ano que exceder 20 anos de contribuição; 100% da média quando decorrer de acidente de trabalho, doença profissional, doença do trabalho ou doenças graves previstas.
+- **Aposentadoria Compulsória:** aos **75 anos**, com proventos proporcionais ao tempo de contribuição.
+- **Aposentadoria Voluntária Geral (Lei 523):** 62 anos mulher / 65 anos homem, 25 anos de contribuição, 10 anos de serviço público e 5 anos no cargo.
+- **Professor:** 57 anos mulher / 60 anos homem, 25 anos de contribuição exclusivamente em funções de magistério, 10 anos de serviço público e 5 anos no cargo.
+- **Agentes nocivos:** 60 anos de idade, 25 anos de efetiva exposição/contribuição, 10 anos de serviço público e 5 anos no cargo; não se admite enquadramento por categoria profissional ou periculosidade.
+- **Pessoa com deficiência:** aplica critérios da LC Federal 142/2013, com pelo menos 10 anos de serviço público e 5 anos no cargo.
+- **Regras de transição:** existem regras por pontos e pedágio para servidores que ingressaram antes da vigência da Lei 523; em caso de dúvida, orientar consulta ao RH/FUNPREFEX.
+- **Pensão por morte:** cota familiar de 50% + 10 pontos percentuais por dependente, até 100%. Dependente menor de 18 anos tem cota de 20%. Dependente inválido ou com deficiência intelectual, mental ou grave possui regra protetiva própria.
+- **Acumulação de benefícios:** quando permitida, recebe-se integralmente o benefício mais vantajoso e percentuais dos demais conforme faixas legais.
+- **Abono de permanência:** servidor que completou requisitos para aposentadoria voluntária e opta por permanecer em atividade pode receber abono de permanência de até o valor de sua contribuição previdenciária.
 
 ---
 
 ## 10. PREVIDÊNCIA COMPLEMENTAR — RPC (Lei 566/2022)
 
-> Esta seção aplica-se a servidores que ingressaram no município **após** a vigência do RPC.
+> Esta seção aplica-se aos servidores alcançados pelo início de vigência do RPC ou aos antigos que aderirem expressamente.
 
-- **Regra do Teto:** As aposentadorias e pensões pagas pelo FUNPREFEX serão limitadas ao **Teto Máximo do INSS (RGPS)**. O valor excedente deve ser buscado pelo fundo complementar.
-- **Inscrição Automática:** Servidores com salário acima do teto são inscritos automaticamente no fundo complementar.
-- **Direito de Desistência:** O servidor pode solicitar anulação e restituição integral dos valores em até **90 dias** da inscrição.
-- **Contribuição Paritária (Patrocínio):** A Prefeitura contribui na proporção 1:1 com o servidor, incidindo **apenas** sobre a parcela do salário que exceder o teto do INSS, limitado a **14%**.
-- **Servidores Antigos:** Podem aderir voluntariamente ao RPC, mas passarão a se submeter à **regra do teto** a partir da adesão.
+- **Regra do Teto:** Para servidores efetivos que ingressarem após o início de vigência do RPC, aposentadorias e pensões pagas pelo RPPS/FUNPREFEX ficam limitadas ao teto do RGPS, independentemente da inscrição no plano complementar.
+- **Servidores Antigos:** Quem ingressou antes do início de vigência do RPC pode aderir mediante opção prévia e expressa. A opção é irrevogável e irretratável, e sujeita o servidor ao teto do RGPS.
+- **Inscrição Automática:** Servidores com remuneração acima do teto do RGPS são automaticamente inscritos no plano complementar desde a entrada em exercício.
+- **Direito de Desistência:** O servidor pode manifestar ausência de interesse em até **90 dias** da inscrição automática. Se fizer isso no prazo, tem direito à restituição integral das contribuições em até **60 dias**, atualizadas conforme regulamento.
+- **Contribuições:** Incidem apenas sobre a parcela que exceder o teto do RGPS. O participante define sua alíquota conforme regulamento.
+- **Contribuição Paritária (Patrocínio):** A Prefeitura contribui na proporção 1:1 com o servidor, limitada a **14%**, e somente para participantes que sejam segurados do RPPS e tenham remuneração acima do teto do RGPS.
+- **Alteração na Lei 523:** A Lei 566 acrescenta parágrafo único ao art. 17 da Lei 523/2021, limitando a contribuição previdenciária ao teto do RGPS para servidores que ingressarem após a vigência do plano complementar ou que optarem por aderir.
+- **Comitê de Assessoramento:** Deve ser instituído quando houver 4 participantes com requisitos mínimos, com composição paritária e até 4 membros.
 
 ---
 
@@ -184,13 +198,13 @@
 > Você tem **30 dias** a partir da data de nomeação. Em caso de necessidade, pode solicitar prorrogação por mais 30 dias mediante requerimento formal.
 
 **P: Fui afastado preventivamente em um PAD. Vou perder meu salário?**
-> Não. O afastamento preventivo durante o PAD **não** corta sua remuneração básica. Seus vencimentos são mantidos durante o processo.
+> Depende da capitulação. A Lei 412 prevê afastamento preventivo de até 60 dias, prorrogável por mais 60. Nos casos graves indicados na lei, o servidor recebe exclusivamente o vencimento básico e adicional por tempo de serviço, se devido.
 
 **P: Posso acumular dois cargos públicos?**
 > Em regra, **não**. A acumulação é proibida. As únicas exceções constitucionais são para **professores** e **profissionais da saúde**, desde que haja compatibilidade de horários.
 
 **P: Qual é o desconto previdenciário do servidor ativo?**
-> Conforme a **Lei 620/2025**, a alíquota do servidor ativo é de **14%** sobre a remuneração.
+> Conforme a **Lei 523/2021**, a alíquota do servidor ativo é de **14%** sobre a remuneração de contribuição. A **Lei 620/2025** trata da contribuição patronal normal, também fixada em 14%.
 
 **P: Quanto tempo dura o estágio probatório?**
 > O estágio probatório tem duração de **3 anos** de efetivo exercício, durante os quais você será avaliado em critérios como assiduidade, pontualidade, eficiência e conduta ética.
