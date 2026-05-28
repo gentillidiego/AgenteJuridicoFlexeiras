@@ -56,3 +56,6 @@ lerna-debug.log*
 logs/
 *.log
 /tmp/
+
+# Anotações locais de operação
+GIT_LOCAL.md
