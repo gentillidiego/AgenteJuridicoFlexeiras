@@ -211,6 +211,52 @@ Atualizar `personality.md` não derruba a sessão do WhatsApp. Mesmo em caso de 
 
 ---
 
+## 🔑 Acesso ao GitHub por SSH
+
+Este projeto deve usar o alias SSH local `github.com-gentillidiego`, configurado em `~/.ssh/config`, para enviar commits ao GitHub sem cair no fluxo HTTPS de usuário/senha.
+
+Configuração esperada em `~/.ssh/config`:
+
+```sshconfig
+Host github.com-gentillidiego
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519_github_gentillidiego
+```
+
+A chave pública correspondente é `~/.ssh/id_ed25519_github_gentillidiego.pub`. Ela deve estar cadastrada no GitHub em **Settings > SSH and GPG keys** como uma **Authentication Key**. Ao cadastrar, cole somente a linha que começa com `ssh-ed25519`; não cole o nome do arquivo nem quebras extras antes da chave.
+
+Para validar o acesso SSH:
+
+```bash
+ssh -T github.com-gentillidiego
+```
+
+A resposta esperada é algo como:
+
+```text
+Hi gentillidiego! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+O remoto correto do projeto é:
+
+```bash
+git remote set-url origin github.com-gentillidiego:gentillidiego/AgenteJuridicoFlexeiras.git
+```
+
+Fluxo padrão para publicar alterações:
+
+```bash
+git status --short --branch
+git add README.md personality.md eliza/AgenteEliza.md
+git commit -m "Descreve a alteracao feita"
+git push origin main
+```
+
+Se o `git push` tentar pedir usuário/senha do GitHub, confira se o `origin` ainda está em HTTPS com `git remote -v` e aplique novamente o `git remote set-url` acima.
+
+---
+
 ## 🔒 Segurança e Práticas Recomendadas
 
 O projeto foi estruturado sob fortes diretrizes de segurança de código:
